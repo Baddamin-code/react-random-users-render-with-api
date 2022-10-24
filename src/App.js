@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect} from "react";
+import Users from "./Users";
+// import { Routes, Route, Link } from "react-router-dom";
 
-function App() {
+const url = `https://randomuser.me/api/?results=500`;
+
+const App = () => {
+    const [users, setUsers] = useState([]);
+    const[loading, setLoading] = useState(false);
+    const[currentPage, setCurrentPage] = useState(1);
+    const[usersPerPage, setUsersPerPage] = useState(10);
+  
+    // fetch API
+    useEffect(() => {
+      const fetchUserData = async () => {
+        setLoading(true);
+        const res = await fetch(url);
+        const users = await res.json();
+        setUsers(users.results);
+        setLoading(false);
+      };
+  
+      fetchUserData();
+    }, []);
+
+    // get current users
+    const indexOfLastUser = currentPage * usersPerPage
+    const indexOfFirstUser = indexOfLastUser - usersPerPage
+    const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Users users={currentUsers} loading={loading} />
+    </>
   );
 }
 
