@@ -50,7 +50,7 @@ const FetchUsers = () => {
               </h1>
               <h1 className="truncate text-green-300">
                 <span className="font-bold">DOB:</span>{" "}
-                {date}
+                {moment(`${date}`).format("MMM Do YYYY")}
               </h1>
             </div>
           );
