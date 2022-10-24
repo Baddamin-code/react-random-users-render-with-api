@@ -21,6 +21,11 @@ const FetchUsers = () => {
 
   return (
     <>
+    <section>
+      {users.map((user) => {
+        // destructuring
+      })}
+    </section>
     </>
   )
 }
