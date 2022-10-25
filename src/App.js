@@ -1,8 +1,9 @@
 import React, { useState, useEffect} from "react";
+import Pagination from "./Pagination";
 import Users from "./Users";
-// import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
-const url = `https://randomuser.me/api/?results=500`;
+const url = `https://randomuser.me/api/?results=300`;
 
 const App = () => {
     const [users, setUsers] = useState([]);
@@ -31,6 +32,7 @@ const App = () => {
   return (
     <>
     <Users users={currentUsers} loading={loading} />
+    <Pagination usersPerPage={usersPerPage} totalUsers={users.length} />
     </>
   );
 }
