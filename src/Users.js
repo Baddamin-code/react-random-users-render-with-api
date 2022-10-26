@@ -32,7 +32,7 @@ const Users = ({ users, loading }) => {
           } = user;
 
           return (
-              <div
+            <div
               key={user.login.uuid}
               className="flex flex-col w-64 max-w-xs px-4 mt-6 p-4 bg-blue-900 rounded-xl"
             >
