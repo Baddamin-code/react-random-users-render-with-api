@@ -12,10 +12,12 @@ Install react router dom to render our app with with react router
 
 Create react app using the npx create-react-app command
 
-import tailwind css framework to style our web pages
+Import tailwind css framework to style our web pages
+
 Fetch random users info from https://randomuser.me/api
 
-install react icons npm i react-icons --save
-install moment package to format dates npm install moment --save
+Install react icons: npm i react-icons --save
+
+Install moment package to format dates: npm install moment --save
 
 https://react-generate-random-users-api.netlify.app/
