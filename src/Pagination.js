@@ -9,7 +9,7 @@ const Pagination = ({ usersPerPage, totalUsers, paginate }) => {
 
   return (
     <nav className="p-2">
-      <ul className="flex flex-wrap text-sm text-gray-700">
+      <ul className="flex flex-wrap justify-center text-sm text-gray-700">
         {pageNumbers.map((number) => (
           <li key={number} className="font-medium border p-2 m-1">
             <a onClick={() => paginate(number)} href="!#">
