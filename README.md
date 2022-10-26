@@ -1,3 +1,6 @@
+Visit Site
+https://react-generate-random-users-api.netlify.app/
+
 WHAT DOES IT DO?
 This is a random user generator app that gets random users data from randomuser.me API. It is a  client-side pagination app
 
@@ -8,3 +11,5 @@ import tailwind css framework to style our web pages
 Fetch random users info from https://randomuser.me/api
 install react icons npm i react-icons --save
 install moment package to format dates npm install moment --save
+
+https://react-generate-random-users-api.netlify.app/
